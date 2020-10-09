@@ -1,1 +1,2 @@
-print(request)
+main(request):
+    print(request)
