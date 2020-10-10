@@ -1,2 +1,2 @@
-main(request):
+def main(request):
     print(request)
