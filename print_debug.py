@@ -1,2 +1,0 @@
-main(request):
-    print(request)
