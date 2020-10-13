@@ -79,7 +79,7 @@ def find_box(soup, box_type, box_size):
     except IndexError:
         return fruit_veg_box
     
-    if box_type == "Fruit and Veg":
+    if box_type == "Fruit And Veg":
         return re.sub("[\(\[].*?[\)\]]", "", fruit_veg_box)
     
     if box_type == "Veg":
@@ -105,6 +105,6 @@ def main(box_type, box_size, delivery_day = datetime.now().weekday()):
     date, mainpage = get_date_page(soup, delivery_day, baseurl)
     soup2 = get_soup(mainpage)
 
-    return find_box(soup2, box_type , box_size)
+    return find_box(soup2, box_type.title() , box_size.title())
 
-#print (main("Fruit and Veg", "Large"))
+print (main("fruit and veg", "large"))
